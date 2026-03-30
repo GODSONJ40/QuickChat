@@ -1,163 +1,89 @@
-# QuickChat
-QuickChat is a fast, secure Java messaging app by Godson JEAN (UNCC ID: 801213219). Built on a client-server model, it enables real-time chat with multiple users, simple login, and a responsive interface—ideal for quick, seamless communication.
+QuickChat
 
+QuickChat is a fast, secure Java-based messaging application built on a client-server architecture. It enables real-time communication between multiple users with a simple login system and a responsive interface, demonstrating core principles of software development including multithreading, object-oriented design, and networking.
 
-About the Application
+Features
+Real-time messaging between multiple clients
+Username-based login authentication
+Responsive and user-friendly interface
+Built using Java with a client-server architecture
+Easily extensible for features like encryption, persistent chat history, and GUI enhancements
+Requirements
+Java Development Kit (JDK) – Version 24.0.1
+Verify installation with:
+java -version
+javac -version
 
-I am Godson JEAN, UNCC student, ID: 801213219, and I have created this messaging application named "QuickChat". The goal of QuickChat is to provide a simple, fast, and secure messaging platform that allows users to communicate seamlessly in real-time. Whether for casual chats or important discussions, QuickChat makes it easy for users to stay connected and engage in meaningful conversations.
+Expected output:
 
-The application is designed with an intuitive user interface, ensuring that users can send and receive messages with minimal delay. Additionally, it incorporates essential features like username-based logins and support for multiple users within a single session.
+java version "24.0.1" ...
+javac 24.0.1
+Project Structure
 
-QuickChat is built using Java and follows core principles of real-time messaging, including client-server communication. It offers a reliable and efficient experience for anyone looking for a straightforward and responsive messaging tool.
+Place all files in the same folder (example path: C:\Projects\QuickChat\).
 
-Thank you for exploring QuickChat!
+Source Files:
 
----
+Server.java
+Client.java
 
-**How to Compile and Run the Java Chat Program (Client-Server Model)**
+Compiled Files:
 
----
+Server.class
+Client.class
+Server$ClientHandler.class
+Predefined Login Credentials
+Username	Password
+user1	pass1
+user2	pass2
+user3	pass3
 
-## ✅ REQUIREMENTS
+Credentials are predefined in the code for testing purposes.
 
-### Java Development Kit (JDK)
+Running the Application
+Step 1: Open Terminal / Command Prompt
 
-* **Required Version**: JDK **24.0.1**
-* Confirm installation by running:
+Navigate to the project folder:
 
-  ```bash
-  java -version
-  javac -version
-  ```
-
-  Expected output:
-
-  ```bash
-  java version "24.0.1" ...
-  javac 24.0.1
-  ```
-
----
-
-## 📁 PROJECT STRUCTURE
-
-Place all the following files into the **same folder**, for example:
-
-```plaintext
-C:\Users\Admin\JavaChatApp\
-```
-
-### Files:
-
-* Server.java
-* Client.java
-
-After compilation, these files will be generated:
-
-* Server.class
-* Client.class
-* Server\$ClientHandler.class
-
----
-
-## 🧩 LOGIN CREDENTIALS (Predefined in the code)
-
-| Username | Password |
-| -------- | -------- |
-| user1    | pass1    |
-| user2    | pass2    |
----
-
-## ⚙️ INSTRUCTIONS TO RUN
-
-### 🔧 Step 1: Open Command Prompt
-
-* Press `Windows + R`
-* Type `cmd`, hit Enter
-
-### 📂 Step 2: Navigate to Project Folder
-
-```bash
-cd "C:\Users\Admin\JavaChatApp\"
-```
-
-### 📦 Step 3: Compile the Java Files
-
-```bash
+cd "C:\Projects\QuickChat\"
+Step 2: Compile the Java Files
 javac Server.java Client.java
-```
-
-If successful, `.class` files will be created.
-
-### 🚀 Step 4: Start the Server
-
-```bash
+Step 3: Start the Server
 java Server
-```
 
-You should see:
+Expected output:
 
-```
 Server started...
 Waiting for clients to connect...
-```
 
-Leave this terminal window open.
+Leave this terminal window open while running clients.
 
-### 💬 Step 5: Start a Client (New Terminal Window)
+Step 4: Start a Client
+Open a new terminal window
+Navigate to the project folder
+cd "C:\Projects\QuickChat\"
+Run the client:
+java Client
+Enter valid credentials:
+Username: user1
+Password: pass1
 
-1. Open a **new** Command Prompt window
-2. Navigate to project folder:
+Expected output:
 
-   ```bash
-   cd "C:\Users\Admin\JavaChatApp\"
-   ```
-3. Run the client:
-
-   ```bash
-   java Client
-   ```
-4. Enter valid credentials when prompted:
-
-   ```
-   Username: user1
-   Password: pass1
-   ```
-
-   Output:
-
-   ```
-   Welcome user1
-   user1 has joined.
-   ```
-
-### ➕ Step 6: Add More Clients (Optional)
-
-* Repeat Step 5 using different usernames (user2, user3) in new windows.
-* Clients can now chat with each other.
-
----
-
-## 🚧 TROUBLESHOOTING
-
-| Problem               | Solution                                               |
-| --------------------- | ------------------------------------------------------ |
-| `java` not recognized | Ensure PATH includes JDK 24.0.1\bin                    |
-| Class not found       | Make sure you compiled all files in the correct folder |
-| Authentication failed | Use only the allowed username/password combinations    |
-
----
-
-## ✅ SUMMARY
-
-| Action      | Command/Note                          |
-| ----------- | ------------------------------------- |
-| Compile     | `javac Server.java Client.java`       |
-| Run Server  | `java Server`                         |
-| Run Client  | `java Client`                         |
-| JDK Version | Use JDK 24.0.1                        |
-| Valid Users | user1/pass1, user2/pass2, user3/pass3 |
-
----
-
-**End of Instructions**
+Welcome user1
+user1 has joined.
+Step 5: Add Additional Clients (Optional)
+Repeat Step 4 in new terminal windows using other usernames (user2, user3, etc.)
+Multiple clients can now communicate in real-time.
+Troubleshooting
+Issue	Solution
+java not recognized	Ensure JDK bin directory is included in system PATH
+Class not found	Verify all files were compiled in the correct folder
+Login fails	Use only the predefined username/password combinations
+Summary of Commands
+Action	Command / Note
+Compile	javac Server.java Client.java
+Run Server	java Server
+Run Client	java Client
+Required JDK	24.0.1
+Test Users	user1/pass1, user2/pass2, user3/pass3
