@@ -55,7 +55,7 @@ user3   pass3
 - Encryption
 - React frontend
 
-## Demo (__screenshots__)
+## Demo
 
 - Server Started
 
@@ -72,3 +72,5 @@ user3   pass3
 - Users2
 
 ![User2](screenshots\qc_user2_to_1.png)
+
+Current Release: v1.1.0
