@@ -1,89 +1,74 @@
-QuickChat
+# QuickChat
 
-QuickChat is a fast, secure Java-based messaging application built on a client-server architecture. It enables real-time communication between multiple users with a simple login system and a responsive interface, demonstrating core principles of software development including multithreading, object-oriented design, and networking.
+QuickChat is a multi-user real-time messaging application built in Java using socket programming, multithreading, and Maven.
 
-Features
-Real-time messaging between multiple clients
-Username-based login authentication
-Responsive and user-friendly interface
-Built using Java with a client-server architecture
-Easily extensible for features like encryption, persistent chat history, and GUI enhancements
-Requirements
-Java Development Kit (JDK) – Version 24.0.1
-Verify installation with:
-java -version
-javac -version
+## Author
 
-Expected output:
+Godson JEAN
 
-java version "24.0.1" ...
-javac 24.0.1
-Project Structure
+## Features
 
-Place all files in the same folder (example path: C:\Projects\QuickChat\).
+- Real-time messaging
+- Multi-client support
+- Client-server architecture
+- Username/password authentication
+- Thread-safe server handling
+- Object serialization messaging
+- Maven build system
 
-Source Files:
+## Technologies
 
-Server.java
-Client.java
+- Java
+- Maven
+- TCP Sockets
+- Multithreading
 
-Compiled Files:
+## How To Run
 
-Server.class
-Client.class
-Server$ClientHandler.class
-Predefined Login Credentials
-Username	Password
-user1	pass1
-user2	pass2
-user3	pass3
+```bash
+# Start Server
+mvn exec:java -Dexec.mainClass="server.Server"
 
-Credentials are predefined in the code for testing purposes.
+# Start Client (in new terminals)
+mvn exec:java -Dexec.mainClass="client.Client"
+```
 
-Running the Application
-Step 1: Open Terminal / Command Prompt
+## Demo Users
 
-Navigate to the project folder:
+Username    Password
 
-cd "C:\Projects\QuickChat\"
-Step 2: Compile the Java Files
-javac Server.java Client.java
-Step 3: Start the Server
-java Server
+user1   pass1
 
-Expected output:
+user2   pass2
 
-Server started...
-Waiting for clients to connect...
+user3   pass3
 
-Leave this terminal window open while running clients.
+----
 
-Step 4: Start a Client
-Open a new terminal window
-Navigate to the project folder
-cd "C:\Projects\QuickChat\"
-Run the client:
-java Client
-Enter valid credentials:
-Username: user1
-Password: pass1
+## Future Improvements
 
-Expected output:
+- Spring Boot migration
+- PostgreSQL database
+- JWT authentication
+- WebSocket support
+- File transfers
+- Encryption
+- React frontend
 
-Welcome user1
-user1 has joined.
-Step 5: Add Additional Clients (Optional)
-Repeat Step 4 in new terminal windows using other usernames (user2, user3, etc.)
-Multiple clients can now communicate in real-time.
-Troubleshooting
-Issue	Solution
-java not recognized	Ensure JDK bin directory is included in system PATH
-Class not found	Verify all files were compiled in the correct folder
-Login fails	Use only the predefined username/password combinations
-Summary of Commands
-Action	Command / Note
-Compile	javac Server.java Client.java
-Run Server	java Server
-Run Client	java Client
-Required JDK	24.0.1
-Test Users	user1/pass1, user2/pass2, user3/pass3
+## Demo (__screenshots__)
+
+- Server Started
+
+![Server Started](screenshots\qc_server_started.png)
+
+- Users Joint
+
+![User Joint](screenshots\qc_sever_started_users_Joint.png)
+
+- User1
+
+![User1](screenshots\qc_user1_to_2.png)
+
+- Users2
+
+![User2](screenshots\qc_user2_to_1.png)
