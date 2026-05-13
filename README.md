@@ -4,7 +4,7 @@ QuickChat is a multi-user real-time messaging application built in Java using so
 
 ## Author
 
-Godson JEAN
+Godson JEAN (Me)
 
 ## Features
 
